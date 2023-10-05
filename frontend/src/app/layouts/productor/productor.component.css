@@ -1,0 +1,37 @@
+.navbar{
+    background: linear-gradient(90deg ,rgb(0, 191, 255),yellow,rgb(0, 191, 255));
+    background-size: 200% ;
+    animation: animatednav 5s linear infinite;
+}
+@keyframes animatednav{
+    0%{
+        background-position:0% 0%;
+    }
+    100%{
+        background-position:200% 0;
+    }
+}
+.sidebar{
+    background-color: black;
+    width:20%;
+    height:100%;
+    /* position: fixed; */
+    float: left;
+}
+.sidebar li{
+    padding-bottom: 20px;
+    padding-right: 130px; 
+    font-weight: bolder;
+    
+}
+.sidebar :hover{
+    color: aliceblue; 
+}
+.sidebar ul :hover{
+    background:aqua; 
+   
+}
+.content{
+    width: 80%;
+    float:left;   
+}
