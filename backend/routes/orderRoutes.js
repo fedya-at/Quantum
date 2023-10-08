@@ -1,11 +1,19 @@
-const express = require("express");
+import express from "express";
 const router = express.Router();
-const orderController = require("../controllers/orderController");
+import {
+  addOrderItems,
+  getMyOrders,
+  getOrderById,
+  updateOrderToPaid,
+  updateOrderToDelivered,
+  getOrders,
+} from "../controllers/orderController.js";
+import { protect, admin } from "../middleware/authMiddleware.js";
 
-router.get("/", orderController.getAllOrders);
-router.get("/:id", orderController.getOrderById);
-router.post("/", orderController.createOrder);
-router.delete("/id", orderController.deleteOrdertById);
-router.put("/", orderController.updateOrderById);
+router.route("/").post(protect, addOrderItems).get(protect, admin, getOrders);
+router.route("/mine").get(protect, getMyOrders);
+router.route("/:id").get(protect, getOrderById);
+router.route("/:id/pay").put(protect, updateOrderToPaid);
+router.route("/:id/deliver").put(protect, admin, updateOrderToDelivered);
 
-module.expors = router;
+export default router;
