@@ -1,4 +1,4 @@
-import Product from "../models/product";
+import Product from "../models/product.js";
 
 //Get all products
 
@@ -62,7 +62,7 @@ const editProductById = async (req, res) => {
   }
 };
 
-module.exports = {
+export{
   getAllProducts,
   getProductById,
   createProduct,

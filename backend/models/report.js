@@ -1,6 +1,6 @@
-import { Schema, model } from "mongoose";
+import mongoose from "mongoose";
 
-const reportSchema = new mongoose.Schema({
+const reportSchema = mongoose.Schema({
   date: { type: Date, default: Date.now },
   content: { type: String, required: true },
   responsiblePerson: {
@@ -12,4 +12,4 @@ const reportSchema = new mongoose.Schema({
 
 const Report = mongoose.model("Report", reportSchema);
 
-module.exports = Report;
+export default Report;
