@@ -20,10 +20,14 @@
 }
 .sidebar li{
     padding-bottom: 20px;
-    padding-right: 130px; 
     font-weight: bolder;
     
 }
+
+.sidebar a :active {
+    color:blueviolet;
+}
+.sidebar li :focus-visible
 .sidebar :hover{
     color: aliceblue; 
 }
@@ -31,6 +35,7 @@
     background:aqua; 
    
 }
+
 .content{
     width: 80%;
     float:left;   
