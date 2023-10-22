@@ -1,0 +1,26 @@
+
+  .sidebar-content {
+    margin: 35px 0;
+    height: max-content; 
+  }
+  .sidebar-content button {
+    color: var(--darkcolor) !important;
+    height: 35px;
+    width: 100%;
+  }
+  .sidebar-content span {
+    margin-left: 15px;
+  }
+  .mat-icon {
+    left: 2px !important;
+  }
+  .logout-icon {
+    color: #ce2c2a;
+  }
+  .side-bar-bottom {
+    position: absolute;
+    bottom: 0;
+  }
+ 
+ 
+  

@@ -1,0 +1,15 @@
+<mat-toolbar>
+  <a [routerLink]="['/v']"><span>Quantum</span></a>
+  <span class="example-spacer"></span>
+  <button mat-button (click)="change_theme()">
+    <mat-icon aria-label="campaign">brightness_medium</mat-icon>
+  </button>
+  <button
+    [routerLink]="['/a/login']"
+    mat-icon-button
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+  >
+    <i class="material-icons">person</i>
+  </button>
+</mat-toolbar>

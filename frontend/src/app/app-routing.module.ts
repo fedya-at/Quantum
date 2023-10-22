@@ -1,17 +1,59 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes,PreloadAllModules} from '@angular/router';
-import { ProductorComponent } from './layouts/productor/productor.component';
+import { RouterModule, Routes } from '@angular/router';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { HomeviewComponent } from './homeview/homeview.component';
+import { DashboardHomeComponent } from './dashboard/dashboard-home/dashboard-home.component';
+import { AddStockComponent } from './dashboard/add-stock/add-stock.component';
+import { ListStockComponent } from './dashboard/list-stock/list-stock.component';
+import { StockTransactionComponent } from './dashboard/stock-transaction/stock-transaction.component';
+import { AddProducerComponent } from './dashboard/add-producer/add-producer.component';
+import { AddDistributerComponent } from './dashboard/add-distributer/add-distributer.component';
+import { ListDistributerComponent } from './dashboard/list-distributer/list-distributer.component';
+import { ListProducerComponent } from './dashboard/list-producer/list-producer.component';
+import { LoginComponent } from './auth/login/login.component';
+import { RegistreComponent } from './auth/registre/registre.component';
 
 const routes: Routes = [
-  {path:'productor',component:ProductorComponent , children:[
-    {path:'clients',loadChildren:()=>import('./view/productor/clients/clients.module').then((m)=>m.ClientsModule)},
-    {path:'dist',loadChildren:()=>import('./view/productor/distrubuter/distrubuter.module').then((m)=>m.DistrubuterModule)},
-    {path:'com',loadChildren:()=>import('./view/productor/commande/commande.module').then((m)=>m.CommandeModule)}
-  ]}
-];
+  { path: '', redirectTo: '/d/dashboard', pathMatch: 'full' },
 
+  {
+    path: 'v',
+    component: HomeviewComponent,
+    children: [
+      { path: '', redirectTo: '/v/home', pathMatch: 'full' },
+      { path: 'home', component: HomeviewComponent },
+      { path: 'contactUs', component: HomeviewComponent },
+    ],
+  },
+
+  {
+    path: 'a',
+    component: LoginComponent,
+    children: [
+      { path: '', redirectTo: '/a/login', pathMatch: 'full' },
+      { path: 'login', component: LoginComponent },
+      { path: 'registre', component: RegistreComponent },
+    ],
+  },
+  {
+    path: 'd',
+    component: DashboardComponent,
+
+    children: [
+      { path: '', redirectTo: '/d/dashboard', pathMatch: 'full' },
+      { path: 'dashboard', component: DashboardHomeComponent },
+      { path: 'AddStock', component: AddStockComponent },
+      { path: 'ListStock', component: ListStockComponent },
+      { path: 'StockTransaction', component: StockTransactionComponent },
+      { path: 'AddProducer', component: AddProducerComponent },
+      { path: 'AddDistributer', component: AddDistributerComponent },
+      { path: 'ListDistributer', component: ListDistributerComponent },
+      { path: 'ListProducer', component: ListProducerComponent },
+    ],
+  },
+];
 @NgModule({
-  imports: [RouterModule.forRoot(routes,{ preloadingStrategy: PreloadAllModules })],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

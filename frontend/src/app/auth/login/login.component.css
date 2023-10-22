@@ -1,0 +1,59 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .animated-background {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    background: linear-gradient(to right, #4A148C, #3f51b5);
+    animation: gradientAnimation 10s infinite alternate;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  .login-card {
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+    margin-top: 200px;
+  }
+  
+  .login-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .mat-icon-large {
+    font-size: 3em;
+  }
+  
+  .mat-icon-small {
+    font-size: 1.2em;
+  }
+  
+  .pointer {
+    cursor: pointer;
+  }
+  
+  .register-link {
+    margin-top: 16px;
+  }
+  
+  .register-link span {
+    margin-right: 8px;
+  }
+  

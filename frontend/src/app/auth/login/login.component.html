@@ -1,0 +1,61 @@
+<div class="animated-background">
+  <button mat-button [routerLink]="['/d']">fazf</button>
+
+  <mat-card class="login-card">
+    <mat-card-header>
+      <mat-icon class="mat-icon-large">account_circle</mat-icon>
+      <mat-card-title>Login</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="login-content">
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <mat-form-field>
+          <mat-icon matSuffix class="mat-icon-small">person</mat-icon>
+          <mat-label>Username</mat-label>
+          <input matInput formControlName="username" required />
+        </mat-form-field>
+        <br />
+
+        <mat-form-field>
+          <mat-icon
+            matSuffix
+            class="mat-icon-small pointer"
+            (click)="togglePasswordVisibility()"
+          >
+            {{ hidePassword ? "visibility_off" : "visibility" }}
+          </mat-icon>
+          <mat-label>Password</mat-label>
+          <input
+            matInput
+            formControlName="password"
+            [type]="hidePassword ? 'password' : 'text'"
+            required
+          />
+        </mat-form-field>
+        <br />
+
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+          (click)="login()"
+        >
+          <mat-icon class="mat-icon-small">login</mat-icon>
+          Login
+        </button>
+
+        <div class="register-link">
+          <span>Don't have an account?</span>
+          <a
+            mat-button
+            color="primary"
+            routerLink="/register"
+            routerLinkActive="active"
+          >
+            <mat-icon class="mat-icon-small">how_to_reg</mat-icon>
+            Register
+          </a>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,102 @@
+<div class="sidebar-content">
+  <button
+    mat-button
+    [routerLink]="['dashboard']"
+    routerLinkActive="activebutton"
+  >
+    <mat-icon aria-label="home">home</mat-icon>
+    <span *ngIf="showContentOnHover">Dashboard_</span>
+  </button>
+</div>
+
+<div class="sidebar-content">
+  <button
+    mat-button
+    [routerLink]="['AddStock']"
+    routerLinkActive="activebutton"
+  >
+    <mat-icon aria-label="add">add_shopping_cart</mat-icon>
+    <span *ngIf="showContentOnHover">Add Stock_</span>
+  </button>
+</div>
+
+<div class="sidebar-content">
+  <button
+    mat-button
+    [routerLink]="['ListStock']"
+    routerLinkActive="activebutton"
+  >
+    <mat-icon aria-label="list">list</mat-icon>
+    <span *ngIf="showContentOnHover">Stocks List</span>
+  </button>
+</div>
+<div class="sidebar-content">
+  <button
+    mat-button
+    [routerLink]="['StockTransaction']"
+    routerLinkActive="activebutton"
+  >
+    <mat-icon aria-label="send_and_archive">send_and_archive</mat-icon>
+    <span *ngIf="showContentOnHover">Transactions</span>
+  </button>
+</div>
+<div class="sidebar-content">
+  <button
+    mat-button
+    [routerLink]="['AddProducer']"
+    routerLinkActive="activebutton"
+  >
+    <mat-icon aria-label="domain_add">domain_add</mat-icon>
+    <span *ngIf="showContentOnHover">AddProducer</span>
+  </button>
+</div>
+<div class="sidebar-content">
+  <button
+    mat-button
+    [routerLink]="['AddDistributer']"
+    routerLinkActive="activebutton"
+  >
+    <mat-icon aria-label="group_add">group_add</mat-icon>
+    <span *ngIf="showContentOnHover">AddDistributer</span>
+  </button>
+</div>
+<div class="sidebar-content">
+  <button
+    mat-button
+    [routerLink]="['ListDistributer']"
+    routerLinkActive="activebutton"
+  >
+    <mat-icon aria-label="list_alt">list_alt</mat-icon>
+    <span *ngIf="showContentOnHover">ListDistributer</span>
+  </button>
+</div>
+<div class="sidebar-content">
+  <button
+    mat-button
+    [routerLink]="['ListProducer']"
+    routerLinkActive="activebutton"
+  >
+    <mat-icon aria-label="featured_play_list">featured_play_list</mat-icon>
+    <span *ngIf="showContentOnHover">ListProducer</span>
+  </button>
+</div>
+<div class="side-bar-bottom">
+  <mat-divider></mat-divider>
+  <div class="sidebar-content">
+    <button mat-button routerLinkActive="activebutton">
+      <mat-icon aria-label="person">person</mat-icon>
+      <span *ngIf="showContentOnHover">Account</span>
+    </button>
+  </div>
+
+  <div class="sidebar-content">
+    <button
+      mat-button
+      [routerLink]="['/Homepage/AboutUs']"
+      routerLinkActive="activebutton"
+    >
+      <mat-icon aria-label="logout" class="info_outline">info_outline</mat-icon>
+      <span *ngIf="showContentOnHover">About</span>
+    </button>
+  </div>
+</div>

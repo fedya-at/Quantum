@@ -1,0 +1,41 @@
+<div class="animated-background">
+  <mat-card class="login-card">
+    <mat-card-header>
+      <mat-icon class="mat-icon-large">how_to_reg</mat-icon>
+      <mat-card-title>Register</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="login-content">
+      <form>
+        <mat-form-field>
+          <mat-icon matSuffix class="mat-icon-small">person</mat-icon>
+          <mat-label>Username</mat-label>
+          <input matInput [(ngModel)]="username" name="username" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <mat-icon matSuffix class="mat-icon-small pointer" (click)="togglePasswordVisibility()">
+            {{ hidePassword ? 'visibility_off' : 'visibility' }}
+          </mat-icon>
+          <mat-label>Password</mat-label>
+          <input matInput [type]="hidePassword ? 'password' : 'text'" [(ngModel)]="password" name="password" required>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field>
+          <mat-icon matSuffix class="mat-icon-small pointer" (click)="togglePasswordVisibility()">
+            {{ hidePassword ? 'visibility_off' : 'visibility' }}
+          </mat-icon>
+          <mat-label>Confirm Password</mat-label>
+          <input matInput [type]="hidePassword ? 'password' : 'text'" [(ngModel)]="confirmPassword" name="confirmPassword" required>
+        </mat-form-field>
+        <br>
+
+        <button mat-raised-button color="primary" (click)="register()">
+          <mat-icon class="mat-icon-small">add_circle</mat-icon>
+          Register
+        </button>
+
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

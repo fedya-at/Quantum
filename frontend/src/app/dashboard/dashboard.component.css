@@ -1,0 +1,19 @@
+.example-container {
+    width: 100%;
+    background-color: var(--whitecolor) !important;
+    height: calc(100vh - 70px); 
+    color: var(--darkcolor);
+  }
+  
+  .sidebar {
+    min-width: 75px;
+    height: 100vh; 
+    padding: 5px;
+    border-right: 1px solid var(--bordercolor);
+    background-color: var(--whitecolor);
+    color: var(--whitecolor);
+  }
+  mat-drawer-content{
+    margin: 50px;
+    padding-left: 50px;
+  }
