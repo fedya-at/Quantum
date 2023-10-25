@@ -20,7 +20,6 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegistreComponent } from './auth/registre/registre.component';
 
 /* *******************MODELS******************** */
-
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
@@ -117,7 +116,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatRadioModule,
     MatProgressBarModule,
     MatDatepickerModule,
-    MatNativeDateModule,
+    MatNativeDateModule,MatFormFieldModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

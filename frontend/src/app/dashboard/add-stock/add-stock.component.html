@@ -1,1 +1,19 @@
-<p>add-stock works!</p>
+<!DOCTYPE html>
+<form [formGroup]="addstock" (ngSubmit)="add()">
+<mat-form-field>
+    <mat-label>Name</mat-label>
+    <input formControlName="name"  matInput required>
+</mat-form-field><br>
+<mat-form-field>
+    <mat-label>price</mat-label>
+    <input formControlName="price" maxlength="5" matInput type="number" required>
+</mat-form-field><br>
+<mat-form-field>
+    <mat-label>quantity</mat-label>
+    <input formControlName="quantity" maxlength="5" matInput type="number" required>
+</mat-form-field><br>
+  <div class="example-button-row">
+  <button mat-raised-button type="submit" color="primary" [disabled]="!addstock.valid">add</button>
+  <button mat-raised-button type="reset" color="warn" onclick="reset()">reset</button>
+  </div>
+</form>
