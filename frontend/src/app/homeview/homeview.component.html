@@ -1,8 +1,93 @@
-<button
-  mat-button
-  routerLinkActive="activebutton"
-  [routerLink]="['/d/dashboard']"
->
-  dashboard
-</button>
-<div>test</div>
+<!DOCTYPE html>
+<body>
+<section [class.nav-bar-scroll]="header_variable" [class.nav-bar]="!header_variable">
+    <div class="nav-content">
+      <img class="image" src="../../assets/img/logo2.png">
+      <ul class="nav-menu"> 
+        <div class="nav-menu-links">
+        <li id="Forums"><a href="">Administrateur</a></li>
+        <li id="Membres"><a href="">Producteur</a></li>
+        <li id="Forums" ><a href="" routerLinkActive="activebutton">Distribiteur</a></li>
+            
+        </div>
+      <div class="nav-menu-auth">
+        <li id="sign"><a routerLink="/a/registre">Sign in</a></li>
+        <li id="log"><a routerLink="/a/login">Log in</a></li>
+      </div>
+      </ul>
+    </div>
+</section>
+<div class="header-background">
+  <h1 style="font-size: 100px; margin-bottom: 0;">QUANTUM</h1>
+  <h1 style="color: #ffff; text-align: center; margin-top: 20px; ">Unis contre les Monopoles</h1>
+  <h2 style="color: #ffff ;text-align: center;  margin-top: 0px;">Ensemble pour un Marché Équitable en Tunisie</h2>
+</div>
+
+<div class="middle">
+  <div class="elements">
+    <div class="element1">
+      <img src="../../assets/img/element1.jpg">
+      <div class="text">
+        <h2 style="color: rgb(93, 23, 106);">
+          Favoriser une Concurrence Équitable sur le Marché Tunisien
+        </h2>
+        <p>Face aux monopoles prévalant dans divers secteurs du marché tunisien, notre mission est d'utiliser la technologie pour détecter ces problèmes et promouvoir une distribution plus équitable des produits.</p>
+      </div>
+    </div>
+    <div class="element2">
+      <div class="text">
+        <h2 style="color: rgb(93, 23, 106);">
+          Les Monopoles : Un Problème Impactant Tout le Marché en Tunisie
+        </h2>
+        <p>La Tunisie a un marché économique restreint, dominé par les entreprises publiques et les monopoles. Les investissements étrangers sont limités dans certains secteurs. La corruption est un problème majeur, comme en témoigne le plus grand cas de corruption en Tunisie, qui impliquait des pratiques monopolistiques.</p>
+      </div>
+      <img src="../../assets/img/element2.png">
+    </div>
+    <div class="element3">
+      <img src="../../assets/img/element3.jpg">
+      <div class="text">
+        <h2 style="color: rgb(93, 23, 106);">
+           Revitaliser le Marché des Produits en Tunisie
+        </h2>
+        <p> 
+          Notre solution consiste à développer une application web qui analyse le marché des produits en Tunisie et collabore avec les autorités et les entreprises pour promouvoir la concurrence et la transparence.
+</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--===========footer=================-->
+<div class="footer">
+<div class="footer-upper">
+  <div class="footer-upper-about">
+    <h3>À propos</h3>
+    <p>Quantum Market Insights : Votre source de données sur le marché des produits en Tunisie. Nous analysons les
+      données pour favoriser la concurrence, améliorer la transparence et garantir une distribution équitable des
+      produits
+    </p>
+  </div>
+  <div class="footer-upper-links">
+    <h3>Liens rapides</h3>
+
+    <span id="li"><a href="">Administrateur</a></span>
+    <span id="li"><a href="">Producteur</a></span>
+    <span id="li"><a href="">Distribiteur</a></span>
+
+
+  </div>
+
+  <div class="footer-upper-links">
+    <h3>Support</h3>
+    <span id="li"><a href="">Contact</a></span>
+    <span id="li"><a href="">Termes &amp; conditions</a></span>
+    <span id="li"><a href="">Politique de confidentialité</a></span>
+  </div>
+</div>
+<div class="footer-down">
+  <p>Copyright © 2023 tous droits réservés par Quantum.com </p>
+  <button>click</button>
+</div>
+</div>
+</body>

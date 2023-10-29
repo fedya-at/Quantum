@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-homeview',
@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class HomeviewComponent {
 
+
+  header_variable=false;
+  @HostListener('document:scroll')
+  scrollfunction(){
+	if(document.body.scrollTop>30){
+		this.header_variable=true
+	}
+	else{
+		this.header_variable=false
+	}
+  }
+  click(){
+    console.log(document.body.scrollTop.valueOf)
+  }
 }

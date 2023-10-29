@@ -14,7 +14,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegistreComponent } from './auth/registre/registre.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/d/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: '/v/home', pathMatch: 'full' },
 
   {
     path: 'v',
