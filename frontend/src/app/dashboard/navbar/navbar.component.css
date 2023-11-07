@@ -27,3 +27,8 @@ mat-toolbar{
   .example-spacer {
     flex: 1 1 auto;
   }
+  .image {
+    padding-left: 30px;
+    height: 71px;
+    max-width: 150px;
+  }

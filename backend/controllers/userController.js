@@ -11,7 +11,18 @@ const authUser = asyncHandler(async (req, res) => {
   const user = await User.findOne({ email });
 
   if (user && (await user.matchPassword(password))) {
-    generateToken(res, user._id);
+    if (user.isAdmin){
+      generateToken(res, user._id,"admin");
+    }
+    else if(user.isControleur){
+      generateToken(res, user._id,"controler");
+    }
+    else if (user.isDistributeur){
+      generateToken(res, user._id,"distrubuter");
+    }
+    else if (user.isProducteur){
+      generateToken(res, user._id,"producteur");
+    }
 
     res.json({
       _id: user._id,
