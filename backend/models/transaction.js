@@ -8,6 +8,6 @@ const productSchema = mongoose.Schema({
   producer_id:{type: String, required: true}
 });
 
-const Transaction = mongoose.model("Product", productSchema);
+const Transaction = mongoose.model("Transaction", productSchema);
 
 export default Transaction;

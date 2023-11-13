@@ -12,6 +12,7 @@ import { ListDistributerComponent } from './dashboard/list-distributer/list-dist
 import { ListProducerComponent } from './dashboard/list-producer/list-producer.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegistreComponent } from './auth/registre/registre.component';
+import { loginguardGuard } from './guards/loginguard.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: '/v/home', pathMatch: 'full' },
@@ -36,6 +37,7 @@ const routes: Routes = [
   },
   {
     path: 'd',
+    canActivate:[loginguardGuard],
     component: DashboardComponent,
 
     children: [

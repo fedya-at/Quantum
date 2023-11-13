@@ -23,6 +23,19 @@ const getProductById = async (req, res) => {
     res.status(500).json({ error: "Failed to fetch product!" });
   }
 };
+//get all transactions of product
+const getproducttransction=async (req,res)=>{
+  try{
+  const transactions = await Product.findById(req.params.id).populate("transactions").transactions;
+  if(!transactions){
+    res.status(404).json({ error: "There is no transactions" });
+  }else{
+    res.json(transactions);
+  }
+  } catch (error) {
+    res.status(500).json({ error: "Failed to fetch transactions of this product!" });
+  }   
+}
 
 // Create a new product
 const createProduct = async (req, res) => {
@@ -71,4 +84,5 @@ export {
   createProduct,
   deleteProductById,
   editProductById,
+  getproducttransction,
 };
